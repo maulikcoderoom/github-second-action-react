@@ -1,0 +1,21 @@
+name : Test Project 
+# on : GitHub Action
+on : push  
+jobs : 
+	first-job:
+		runs-on: ubuntu-latest
+		steps: 
+			- name : Get code 
+			  uses : actions/checkout@v3
+			# use uses keywork to work with predefined action 
+			- name : Install NodeJs
+			  uses : actions/setup-node@v3
+			  with: 
+				node-version: 18
+			- name : Install dependencies
+			  run : npm ci 
+			  #to install dependency 
+			- name : Run tests
+			  run : npm test
+			  
+			  
