@@ -2,7 +2,7 @@ name : Test Project
 # on : GitHub Action
 on : push  
 jobs : 
-	first-job:
+	test:
 		runs-on: ubuntu-latest
 		steps: 
 			- name : Get code 
